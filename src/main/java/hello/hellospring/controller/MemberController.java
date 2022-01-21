@@ -23,6 +23,8 @@ public class MemberController {
     // member Service에 wired 해 줌 => 의존성 주입
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
+        //Aop를 이용해 proxy class가 주입되는지 확인하기 위한 출력문.
     }
 
     @GetMapping("/members/new")

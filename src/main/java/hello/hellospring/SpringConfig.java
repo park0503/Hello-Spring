@@ -1,5 +1,6 @@
 package hello.hellospring;
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.*;
 import hello.hellospring.service.MemberService;
@@ -37,4 +38,9 @@ public class SpringConfig
     //public MemberRepository memberRepository() {
         //return new JpaMemberRepository(em);
     //}
+
+//    @Bean //aop는 이게 좋음 하지만 지금은 component로 대체
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
 }
